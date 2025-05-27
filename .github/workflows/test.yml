@@ -3,15 +3,14 @@ name: Python Tests
 on:
   workflow_call:
     inputs: 
-      runner_type: 
+      runner_label: 
         description: 'Runner to use'
-        required: true
         type: string
         default: 'ubuntu-latest'
 
 jobs: 
   run-tests: 
-    runs-on: ${{ inputs.runner_type }}
+    runs-on: ${{ inputs.runner_label }}
     strategy: 
       matrix:
         python-version: [ '3.11', '3.12' ]
