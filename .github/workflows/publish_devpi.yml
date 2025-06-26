@@ -1,4 +1,4 @@
-name: Tag Bump
+name: Build and publish to devpi
 
 on:
   workflow_call:
