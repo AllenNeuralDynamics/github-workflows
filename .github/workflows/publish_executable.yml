@@ -9,12 +9,6 @@ on:
         default: 'self-hosted-good'
 
 jobs:
-  tag: 
-    uses: AllenNeuralDynamics/github-workflows/.github/workflows/tag.yml@main
-    with: 
-      runner_label: self-hosted-good
-    secrets: inherit
- 
   extract-info:
     runs-on: self-hosted-good
     needs: tag
